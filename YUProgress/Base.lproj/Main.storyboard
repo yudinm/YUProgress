@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H4f-Hg-E3c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Example View Controller-->
+        <scene sceneID="EGX-Wn-b4L">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="ExampleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H4f-Hg-E3c" customClass="ExampleViewController" customModule="YUProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AGY-K6-3x2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-b8-FFC">
+                                <rect key="frame" x="16" y="36" width="343" height="611"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CI-Y4-XfY">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8t-ol-e8m" customClass="YUProgressView" customModule="YUProgress" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="16"/>
+                                                <color key="backgroundColor" red="1" green="0.97941797799999997" blue="0.072710441670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="BYd-qb-Vhc"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="0.25200814259999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="YNN-WK-Jxa"/>
+                                            <constraint firstItem="p8t-ol-e8m" firstAttribute="leading" secondItem="3CI-Y4-XfY" secondAttribute="leading" id="ejW-X0-5UY"/>
+                                            <constraint firstItem="p8t-ol-e8m" firstAttribute="top" secondItem="3CI-Y4-XfY" secondAttribute="top" id="fW5-OX-1PW"/>
+                                            <constraint firstAttribute="trailing" secondItem="p8t-ol-e8m" secondAttribute="trailing" id="hTm-qt-xnv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.25264084510000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3CI-Y4-XfY" firstAttribute="top" secondItem="GBy-b8-FFC" secondAttribute="top" id="5Me-mh-iUe"/>
+                                    <constraint firstItem="3CI-Y4-XfY" firstAttribute="leading" secondItem="GBy-b8-FFC" secondAttribute="leading" id="8Bz-QO-o61"/>
+                                    <constraint firstAttribute="trailing" secondItem="3CI-Y4-XfY" secondAttribute="trailing" id="SnS-73-3VK"/>
+                                    <constraint firstItem="3CI-Y4-XfY" firstAttribute="centerX" secondItem="GBy-b8-FFC" secondAttribute="centerX" id="XzB-FT-HJi"/>
+                                    <constraint firstAttribute="bottom" secondItem="3CI-Y4-XfY" secondAttribute="bottom" constant="800" id="mQ4-kR-Zil"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="GBy-b8-FFC" firstAttribute="leading" secondItem="Am4-nc-QKk" secondAttribute="leading" constant="16" id="74B-4v-8R4"/>
+                            <constraint firstItem="Am4-nc-QKk" firstAttribute="bottom" secondItem="GBy-b8-FFC" secondAttribute="bottom" constant="20" id="BKu-Bm-vLZ"/>
+                            <constraint firstItem="Am4-nc-QKk" firstAttribute="trailing" secondItem="GBy-b8-FFC" secondAttribute="trailing" constant="16" id="MVj-E9-zxr"/>
+                            <constraint firstItem="GBy-b8-FFC" firstAttribute="top" secondItem="Am4-nc-QKk" secondAttribute="top" constant="16" id="YdL-PT-gH8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Am4-nc-QKk"/>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="p8t-ol-e8m" id="5Yd-c1-AFG"/>
+                        <outlet property="scrollView" destination="GBy-b8-FFC" id="ODe-mB-mme"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiq-Wt-gY9" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="50" y="41"/>
         </scene>
     </scenes>
 </document>
